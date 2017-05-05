@@ -3,8 +3,8 @@ import React from 'react';
 const IngredientProperties = (props) => {
   const ingredients = props.showList.split(',').map((ingredient, index) => {
     return (
-      <div>
-        <li key={index} className="list-group-item">
+      <div key={ingredient}>
+        <li className="list-group-item">
           {ingredient}
         </li>
       </div>

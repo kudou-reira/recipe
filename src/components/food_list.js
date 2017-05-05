@@ -7,19 +7,21 @@ class FoodList extends React.Component {
     // export this array of object from another file.
     // and then import it into this file
     this.state = {
-      data: [
+      food: [
         {
           key: 0,
           food: 'Pumpkin Pie',
-          ingredients: 'Pumpkin Puree, Sweetened Condensed, Eggs, Spice, Pie'
-        }, {
+          ingredients: 'Pumpkin Puree,Sweetened Condensed,Eggs,Spice,Pie'
+        },
+        {
           key: 1,
           food: 'Spaghetti',
-          ingredients: 'Noodles, Tomato Sauce, (Optional) Meatballs'
-        }, {
+          ingredients: 'Noodles,Tomato Sauce,(Optional) Meatballs'
+        },
+        {
           key: 2,
           food: 'Onion Pie',
-          ingredients: 'Onion, Pie Crust, Sounds Yummy right?'
+          ingredients: 'Onion,Pie Crust,Sounds Yummy right?'
         }
       ],
       countFood: function() {
@@ -32,7 +34,7 @@ class FoodList extends React.Component {
     return (
       <div>
         <div className="someDiv">
-          <FoodProperties foodStuff={this.state.data}/> 
+          <FoodProperties food={this.state.food}/>
         </div>
       </div>
     );
