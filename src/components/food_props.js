@@ -1,36 +1,20 @@
 import React from 'react';
-import Example from './show_modal';
+import Modal from './show_modal';
 
 const FoodProperties = (props) => {
-    
-    const foodItems = props.foodStuff.map((data1, index) => {
-        
-        return(
-            
-            //add key  
-            
-            <li key = {data1.key} className = "list-group-item">
-                                          
-                        <Example showFood = {data1} />
-                        {console.log("check")}
-                                        
-            </li>
-                                          
-        );
-        
-    });
-    
 
-    return(
-        
-        <ul>
-            {foodItems}
-            {console.log(foodItems)}
-        </ul>
-    
+  console.log(props)
+
+  const foodItems = props.food.map((item, index) => {
+    console.log('food item', item)
+    return (
+      <li key={index} className="list-group-item">
+        <Modal item={item} />
+      </li>
     );
-    
-    
+  });
+
+  return <ul>{foodItems}</ul>
 }
 
 export default FoodProperties;
